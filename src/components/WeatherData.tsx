@@ -156,7 +156,7 @@ export const WeatherData = ({ data, loading }: WeatherDataProps) => {
                 )}
                 
                 <Badge variant="secondary" className="w-fit">
-                  {paramData.length} pontos de dados
+                  {paramData.length} dias apurados
                 </Badge>
               </CardContent>
             </Card>
