@@ -37,7 +37,7 @@ class NASAPowerService {
     longitude: number, 
     parameters: string[] = ['T2M', 'PRECTOTCORR'],
     startDate: string = '2001-01-01',
-    endDate: string = '2020-12-31'
+    endDate: string = '2025-12-15'
   ): Promise<ClimateData> {
     // Join parameters
     const parametersString = parameters.join(',');
@@ -51,7 +51,7 @@ class NASAPowerService {
     url.searchParams.set('community', 'RE');
     url.searchParams.set('parameters', parametersString);
     url.searchParams.set('format', 'JSON');
-    url.searchParams.set('user', 'anonymous');
+    url.searchParams.set('user', 'climagro');
 
     try {
       console.log('Fetching NASA POWER data from:', url.toString());
@@ -92,8 +92,8 @@ class NASAPowerService {
 
       return transformedData;
     } catch (error) {
-      console.error('Error fetching NASA POWER data:', error);
-      throw new Error('Failed to fetch climate data from NASA POWER API');
+      console.error('Erro ao buscar dados do NASA POWER:', error);
+      throw new Error('Falha ao buscar dados climáticos da API NASA POWER');
     }
   }
 }
