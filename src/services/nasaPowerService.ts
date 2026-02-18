@@ -36,7 +36,7 @@ class NASAPowerService {
     latitude: number, 
     longitude: number, 
     parameters: string[] = ['T2M', 'PRECTOTCORR'],
-    startDate: string = '2001-01-01',
+    startDate: string = '2010-01-01',
     endDate: string = '2025-12-15'
   ): Promise<ClimateData> {
     // Join parameters
