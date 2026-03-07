@@ -51,7 +51,7 @@ class NASAPowerService {
     url.searchParams.set('community', 'RE');
     url.searchParams.set('parameters', parametersString);
     url.searchParams.set('format', 'JSON');
-    url.searchParams.set('user', 'anonymous');
+    url.searchParams.set('user', 'climagro');
 
     try {
       console.log('Fetching NASA POWER data from:', url.toString());
